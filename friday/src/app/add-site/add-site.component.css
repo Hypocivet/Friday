@@ -1,0 +1,53 @@
+#addsite{
+  font-size: 16px;
+  font-family: "微软雅黑";
+  height:625px;
+}
+span{
+  color: red;
+}
+input{
+  height:45px;
+  margin:0 10px;
+}
+.title{
+  height:58px;
+  width:100%;
+  padding:20px;
+  border-bottom: 1px solid lightgrey;
+  margin:0;
+  top:0;
+  position: relative;
+}
+.form{
+  margin:40px 32px;
+}
+.form>div{
+  height:45px;
+  font-size:18px;
+  margin:25px 0;
+}
+.form>div:nth-child(2),.form>div:nth-child(3),.form>div:nth-child(4){
+  margin-left: 20px;
+}
+.form>.radio{
+  margin-left: 145px;
+  font-size:16px;
+}
+.form>.radio>input{
+  height:20px;
+}
+button{
+  width:150px;
+  height:50px;
+  background: #f08200;
+  border: 0;
+  color: #ffffff;
+  border-radius:5px;
+  margin-left: 125px;
+}
+select{
+  width:140px;
+  height:35px;
+  margin:0 10px;
+}

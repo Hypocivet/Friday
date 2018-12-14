@@ -1,0 +1,144 @@
+hr{
+  margin:20px 0;
+}
+.f-wrap{
+  width: 100%;
+  overflow: hidden;
+}
+.footer{
+  width: 1280px;
+  margin: 0 auto;
+  /*background-color: pink;*/
+}
+.items{
+  width: 100%;
+  overflow: hidden;
+}
+.item{
+  width: 256px;
+  height: 105px;
+  float: left;
+  box-sizing: border-box;
+  border-right: 1px solid #dddddd;
+  position: relative;
+}
+.security{
+  position: absolute;
+  left: 48px;
+  top: 28px;
+}
+
+.item>p{
+  font-size: 24px;
+  position: absolute;
+  left:111px;
+  top: 32px;
+}
+.logo{
+  width: 445px;
+  height: 200px;
+  position: relative;
+  float: left;
+}
+.logoPic{
+  position: absolute;
+  left: 30px;
+  top: 34px;
+}
+.logo>p{
+  position: absolute;
+  left: 40px;
+  top: 139px;
+  font-size: 18px;
+}
+.pp{
+  position: relative;
+  top: 139px;
+  left: 220px;
+  padding-left: 25px;
+  font-size: 18px;
+  color: #f08200;
+}
+.pp>p{
+  position:absolute;
+  left:55px;
+  top:0;
+}
+.wc{
+  width: 300px;
+  height: 200px;
+  float: left;
+  overflow: hidden;
+}
+.owc{
+  width: 130px;
+  height: 200px;
+  float: left;
+  position: relative;
+}
+.wc img{
+  margin-top:20px;
+}
+.owc>p{
+  position: absolute;
+  top: 166px;
+  left: 15px;
+}
+.awc{
+  width: 130px;
+  height: 200px;
+  float: right;
+  position: relative;
+}
+.awc>p{
+  position: absolute;
+  top: 166px;
+  left: 27px;
+}
+.link{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 25px;
+}
+.link>ul{
+  list-style: none;
+}
+.link>ul>li>a{
+  font-size: 14px;
+  color: #d0d0d0;
+}
+.link>ul>li:nth-child(1)>a{
+  font-size: 16px;
+  color: #000000;
+}
+.link>ul>li:nth-child(2){
+  margin-top: 28px;
+}
+.link>ul>li:nth-child(3),.link>ul>li:nth-child(4){
+  margin-top: 16px;
+}
+#f-footer{
+  height:113px;
+  margin-top:55px;
+}
+.copyright{
+  list-style: none;
+  display: block;
+  width:444px;
+  margin:0 auto;
+}
+.copyright>li{
+  display: inline-block;
+  padding: 0 7px;
+}
+.cr{
+  list-style: none;
+  display: block;
+  width:140px;
+  margin:0 auto;
+}
+.cr>li{
+  display: inline-block;
+  padding: 0 7px;
+  color: #f08200;
+}

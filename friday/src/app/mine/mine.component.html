@@ -1,0 +1,36 @@
+<div id="mine">
+  <div class="title">个人资料</div>
+  <div class="headimg">
+    <span>当前头像：</span>
+    <img [src]="headImg">
+    <button onclick="document.getElementById('usersImg').click()">修改</button>
+    <form action="/api/upload" method="post" enctype="multipart/form-data">
+      <input type="file"  accept="image/*" (change)="showImg($event)" id="usersImg" style="display: none;" name="headImg">
+      <input type="submit" id="upload" style="display: none;">
+    </form>
+  </div>
+  <div>
+    <span>昵称：</span>
+    <input type="text" placeholder="{{nickname}}" disabled="disabled">
+  </div>
+  <div id="sex">
+    <span>性别：</span>
+    <div>
+      <img [src]="sex=='男'?'http://192.168.47.47:1015/body/relo/onClick.png':'http://192.168.47.47:1015/body/relo/toClick.png'" alt="off" (click)="toChange($event)">男
+    </div>
+    <div>
+      <img [src]="sex=='女'?'http://192.168.47.47:1015/body/relo/onClick.png':'http://192.168.47.47:1015/body/relo/toClick.png'" alt="off" (click)="toChange($event)">女
+    </div>
+  </div>
+  <div>
+    <span>生日：</span>
+    <input type="date" [(ngModel)]="birthday">
+  </div>
+  <div>
+    <span>手机：</span>
+    <input type="text" placeholder="{{nickname}}" disabled>
+    <button [routerLink]="['/center/changephone']">更换手机</button>
+  </div>
+  <button (click)="submit()" class="submit" onclick="document.getElementById('upload').click()">确认提交</button>
+</div>
+<img src="{{img}}" alt="">

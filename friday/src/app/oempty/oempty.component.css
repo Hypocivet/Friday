@@ -1,0 +1,32 @@
+.empty{
+  height:400px;
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+}
+.car-empty{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+.empty-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+.empty-1 span{
+  margin: 10px 0;
+}
+.empty-1 button{
+  background-color:rgb(240, 130, 0);
+  border-radius: 5px;
+  width: 150px;
+  height: 50px;
+  outline: none;
+  color: #ffffff;
+  margin: 10px 0;
+  border: 0;
+}

@@ -1,0 +1,39 @@
+<div class="wrap">
+  <div class="title">
+    <p>绑定手机</p>
+  </div>
+  <div class="form">
+    <div class="item">
+      <input type="text" placeholder="请输入手机号" [(ngModel)]="phoneNum"  (keyup)="isNametrue()">
+    </div>
+
+    <div class="item">
+      <input type="password" placeholder="请输入密码(6-20位)" [(ngModel)]="password" (keyup)="isPwdtrue()">
+    </div>
+
+    <div class="item">
+      <input type="password" placeholder="请再次输入密码"[(ngModel)]="again" (keyup)="isAgaintrue()">
+    </div>
+
+    <div class="item">
+      <input type="text" placeholder="验证码">
+    </div>
+
+    <div class="item">
+      <input type="text" placeholder="手机验证码">
+      <div class="verification">
+        <p>获取验证码</p>
+      </div>
+    </div>
+    <div class="btn" (click)="doClick($event)">
+      <p>点击绑定</p>
+    </div>
+  </div>
+  <div class="hint" [class.show]="showflag">
+    <img src="http://192.168.47.47:1015/body/userCenter/binding.png">
+    <p>恭喜您绑定成功</p>
+  </div>
+  <img src="http://192.168.47.47:1015/body/relo/check.png"class="check1" [class.show]="flagOne">
+  <img src="http://192.168.47.47:1015/body/relo/check.png"class="check2" [class.show]="flagTwo">
+  <img src="http://192.168.47.47:1015/body/relo/check.png"class="check3" [class.show]="flagThree">
+</div>

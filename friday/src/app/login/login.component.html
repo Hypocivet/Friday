@@ -1,0 +1,41 @@
+ <div class="login-box">
+  <div class="wrap">
+    <p class="p1">登陆</p>
+    <a [routerLink]="['/relo/loginbyphone']" class="iphone">手机验证登陆</a>
+    <img src="http://192.168.47.47:1015/body/relo/iPhone.png" alt="" class="iphone-img">
+    <div class="iphone-input">
+      <input type="text" placeholder="请输入手机号" class="username" [(ngModel)]="username" #userName (keyup)="istrue(userName.value)"><img src="http://192.168.47.47:1015/body/relo/check.png" alt="" class="check" [class.show]="flagImg">
+    </div>
+    <img src="http://192.168.47.47:1015/body/relo/alert.png" [class.show]="flagp" class="alert">
+    <p class="alert-p" [class.show]="flagp">{{str1}}</p>
+    <div class="password-input">
+      <input type="password" placeholder="请输入密码" class="password" [(ngModel)]="password">
+    </div>
+
+    <div class="verificationDiv">
+      <input type="text"placeholder="验证码"class="verificationP">
+    </div>
+
+    <img [attr.src]="src" alt="" class="checkBox" (click)="changeSrc($event)"><p class="checkBox-p">自动登陆</p>
+    <a href="###" class="forget">忘记密码</a>
+    <div class="login-regist">
+      <div class="left" (click)="login($event)">
+        <p>登陆</p>
+      </div>
+      <div class="right" (click)="toRegister()">
+        <p>注册</p>
+      </div>
+    </div>
+    <p class="hint">提示：未注册用户将直接注册成为礼拜五用户 </p>
+    <p class="web">-------------用合作网站登陆---------------<p>
+    <div class="qqWechat">
+      <div class="wechat">
+        <img src="http://192.168.47.47:1015/body/relo/weChat.png" alt="">
+      </div>
+      <div class="qq">
+        <img src="http://192.168.47.47:1015/body/relo/qq.png" alt="">
+     </div>
+    </div>
+  </div>
+</div>
+

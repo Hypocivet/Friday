@@ -1,0 +1,87 @@
+<div class="wrap">
+  <div class="title">
+    <p>积分订单</p>
+  </div>
+  <div class="centen">
+    <div class="nav">
+      <div class="item all" [class.showcolor]="selectName == '全部'" (click)="getProByCategory('全部')">
+        <p>全部</p>
+      </div>
+      <div class="interval"></div>
+      <div class="item wait" [class.showcolor]="selectName == '待付款'" (click)="getProByCategory('待付款')">
+        <p>待付款</p>
+      </div>
+      <div class="interval"></div>
+      <div class="item wait" [class.showcolor]="selectName == '待发货'" (click)="getProByCategory('待发货')">
+        <p>待发货</p>
+      </div>
+      <div class="interval"></div>
+      <div class="item wait" [class.showcolor]="selectName == '待收货'" (click)="getProByCategory('待收货')">
+        <p>待收货</p>
+      </div>
+      <div class="interval"></div>
+      <div class="item wait" [class.showcolor]="selectName == '待评价'" (click)="getProByCategory('待评价')">
+        <p>待评价</p>
+      </div>
+      <div class="interval"></div>
+      <div class="item refund" [class.showcolor]="selectName == '退款/售后'" (click)="getProByCategory('退款/售后')">
+        <p>退款/售后</p>
+      </div>
+      <div class="interval"></div>
+      <div class="item refund" [class.showcolor]="selectName == '关闭'" (click)="getProByCategory('关闭')">
+        <p>已完成/关闭</p>
+      </div>
+      <div class="recycle">
+        <a href="">订单回收站</a>
+      </div>
+    </div>
+    <div class="box">
+      <div class="orderNull" [class.none]="flag">
+        <img src="http://192.168.47.47:1015/body/order/orderSize.png">
+        <p>你还没有订单哦!</p>
+        <div (click)="doClick()" style="cursor: pointer;">去首页看看</div>
+      </div>
+      <div class="order" *ngFor="let order of pagePros; let i = index" [class.none]="flagb">
+        <div class="order-top">
+          <p class="orderNum">订单号:{{order.orderId}}</p>
+          <p class="orderTime">下单时间:{{order.orderTime}}</p>
+          <p class="shopName" style="color: #4b943d;">{{order.commodityId.shopName}}</p>
+          <p class="oredrState">订单状态：</p><p class="orange" style="color: #f08200;">{{order.orderState}}</p>
+        </div>
+        <div class="order-bottom">
+          <div class="products">
+            <div class="product" *ngFor="let pro of pageA[i]">
+              <div class="productImg"><img [src]="pro.commodityImg" alt=""></div>
+              <div class="productName"><p>{{pro.commodityName}}</p></div>
+              <div class="productSpecification"><p>{{pro.size}}</p></div>
+              <div class="productCount"><p>{{pro.commodityPrice}} × {{pro.count}}</p></div>
+            </div>
+          </div>
+          <div class="total">
+            <p>积分：{{getPrice(i)}}</p>
+          </div>
+          <div class="state">
+            <a class="pfour margin" [routerLink]="['/center/orderdetails']" (click)="details(order, pageA, i)">查看详情</a>
+            <div class="choose pfour margin" [class.show]="order.orderState == '关闭'" (click)="delete(order.orderId)"><p>删除订单</p></div>
+            <div class="choose pthree margin" [class.show]="order.orderState == '待付款'" (click)="toPay(order.orderId)"><p>去支付</p></div>
+            <div class="choose pfour margin" [class.show]="order.orderState == '待付款'" (click)="cancel(order.orderId)"><p>取消订单</p></div>
+            <div class="choose pfour margin" [class.show]="getTrue(order,'已收货','待发货')" (click)="apply(order.orderId)"><p>申请退款</p></div>
+            <div class="choose pfour margin" [class.show]="order.orderState == '待收货'" (click)="confirm(order.orderId)"><p>确认收货</p></div>
+            <div class="choose pfour margin" [class.show]="order.orderState == '待收货'" (click)="read(order.orderId)"><p>查看物流</p></div>
+            <div class="choose pfour margin" [class.show]="order.orderState == '已收货'" (click)="finish(order.orderId)"><p>交易完成</p></div>
+            <div class="choose pthree margin" [class.show]="getTrue(order,'已收货','待评价')" (click)="evaluate(order, pageA[i])"><p>去评价</p></div>
+            <div class="choose margin" [class.show]="getTrue(order,'退款失败')" (click)="intervenion(order.orderId)"><p>申请平台介入</p></div>
+          </div>
+        </div>
+      </div>
+      <!--按钮组-->
+      <div [class.none]="flagb">
+        <div class="btns">
+          <button *ngFor="let c of pages" (click)="showProsPage(c)" [class.btn-primary]="selectPage == c"  class="btn btn-default" style="margin:20px 0;">{{c}}</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

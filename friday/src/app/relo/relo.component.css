@@ -1,0 +1,48 @@
+#body{
+  width:100%;
+  height:500px;
+  background: url("http://192.168.47.47:1015/body/relo/bg.png") no-repeat;
+  background-position: center center;
+  position: relative;
+}
+#advertising{
+  width:492px;
+  height:226px;
+  position:absolute;
+  left:220px;
+  top:138px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border:2px solid #ffffff;
+}
+#advertising>div{
+  margin:8px;
+  width:472px;
+  height:206px;
+  border:2px solid #ffffff;
+  box-sizing:border-box;
+  font-size: 48px;
+  color: #ffffff;
+  position:relative;
+}
+#advertising>div>span{
+  position:absolute;
+  left:112px;
+  top:42px;
+}
+#advertising>div>ul{
+  width:333px;
+  display: flex;
+  justify-content: space-between;
+  position:absolute;
+  left:68px;
+  bottom:36px;
+}
+#relo{
+  background: #ffffff;
+  width:387px;
+  height:100%;
+  position:absolute;
+  right: 0;
+}

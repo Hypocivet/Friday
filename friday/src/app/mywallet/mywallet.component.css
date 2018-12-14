@@ -1,0 +1,97 @@
+.wrap{
+  width: 1084px;
+  height: 625px;
+}
+.wrap-title{
+  width: 170px;
+  height: 59px;
+  line-height: 59px;
+  text-align: center;
+  position: relative;
+}
+.wrap-title>p{
+  position: absolute;
+  left: 140px;
+  top: 0;
+  color: #f08200;
+}
+.box{
+  width: 100%;
+  height: 566px;
+  box-sizing: border-box;
+  border-top: 1px solid #e9e9e9;
+}
+.box>div:nth-child(1){
+  margin-top: 40px;
+  margin-left: 70px;
+}
+.box>div:nth-child(2){
+  width: 420px;
+  height: 34px;
+  margin-top: 19px;
+  margin-left: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.box>div:nth-child(2)>div{
+  width: 115px;
+  height: 34px;
+  text-align: center;
+  line-height: 34px;
+  box-sizing: border-box;
+  border: 1px solid #e9e9e9;
+  cursor: pointer;
+}
+.box>div:nth-child(3){
+  margin-left: 70px;
+  margin-top: 20px;
+  color: #f08200;
+  font-size: 18px;
+}
+.box>div:nth-child(4){
+  margin: 20px 0 0 70px;
+  display: flex;
+}
+.box>div:nth-child(4)>div{
+  width: 355px;
+  height: 190px;
+  box-sizing: border-box;
+  border: 1px solid #e9e9e9;
+  position: relative;
+  background: url("http://192.168.47.47:1015/body/order/song.png");
+  background-size: 100%;
+}
+.box>div:nth-child(4)>div:nth-child(1){
+  margin-right: 70px;
+}
+.box>div:nth-child(5){
+  width: 150px;
+  height: 50px;
+  margin: 20px 0 0 70px;
+  border-radius: 5px;
+  background-color: #f08200;
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  color: #ffffff;
+  font-size: 18px;
+}
+.box>div:nth-child(4)>div>p:nth-child(1){
+  margin: 20px 0 0 20px;
+  font-size: 18px;
+}
+.box>div:nth-child(4)>div>p:nth-child(3){
+  position: absolute;
+  right: 20px;
+  top: 80px;
+  font-size: 18px;
+}
+.box>div:nth-child(4)>div>p:nth-child(4){
+  position: absolute;
+  right: 70px;
+  top: 110px;
+  font-size: 18px;
+}
+.choose{
+  background-color: #f4fff2;
+}

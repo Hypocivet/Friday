@@ -1,0 +1,44 @@
+<section class="car">
+  <div class="title">
+    <img src="http://192.168.47.47:1015/body/order/car.png" />
+    <span>购物车</span>
+  </div>
+  <div class="info" *ngFor="let count of count;let i = index">
+    <ul class="border">
+      <li class="store"><input name="check" type="checkbox"><span>爱果果水果店</span></li>
+      <li>规格</li>
+      <li>单价</li>
+      <li class="num">数量</li>
+      <li>金额</li>
+      <li>操作</li>
+    </ul>
+    <ul class="border-content">
+      <li class="sp"><input type="checkbox" name="check"/><img src="http://192.168.47.47:1015/body/order/lz.png" /><span>云南蒙自石榴8个装</span></li>
+      <li>8个装</li>
+      <li>588</li>
+      <li class="sl">
+        <button class="jian" (click)="jian($event)"></button>
+        <input class="count" placeholder="{{i}}" value="{{count}}" (change)="changeCount($event)">
+        <button class="jia" (click)="jia($event)"></button>
+      </li>
+      <li>2000</li>
+      <li><a href="">删除</a></li>
+    </ul>
+    <ul class="mon">
+      <li class="price">商品金额:$200</li>
+    </ul>
+  </div>
+  <div class="all">
+    <ul class="choose">
+      <li><a href="">全选</a></li>
+      <li><a href="">批量删除</a></li>
+    </ul>
+    <ul class="sun">
+      <li>商品总计:<span>$2000</span></li>
+      <button [routerLink]="['/myorder']">立即购买</button>
+    </ul>
+  </div>
+</section>
+
+
+

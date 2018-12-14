@@ -1,0 +1,56 @@
+.wrap{
+  height: 625px;
+}
+.wrap-title{
+  width: 100%;
+  height: 59px;
+  line-height: 59px;
+  padding-left: 20px;
+  border-bottom: 1px solid #e9e9e9;
+}
+.wrap-content{
+  width: 100%;
+  height: 566px;
+}
+.item{
+  width: 310px;
+  height: 480px;
+  margin: 40px auto;
+  position: relative;
+  border: 1px solid #e9e9e9;
+}
+.item>img{
+  margin: 10px 24px;
+}
+.current-price{
+  color: #ff5757;
+  font-size: 18px;
+}
+.original-price{
+  text-decoration: line-through;
+}
+.car{
+  width: 34px;
+  height: 30px;
+  background: url("http://192.168.47.47:1015/body/order/car.png");
+  cursor: pointer;
+}
+.box{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.button{
+  width: 150px;
+  height: 35px;
+  border-radius: 15px;
+  background-color: #4b943d;
+  text-align: center;
+  line-height: 35px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -75px;
+  cursor: pointer;
+}

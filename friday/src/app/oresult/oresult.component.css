@@ -1,0 +1,172 @@
+.oresult{
+  position: relative;
+  width: 1280px;
+  left:0;
+  right: 0;
+  margin: 0 auto;
+}
+.none{
+  display: none;
+}
+.owait{
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,0.8);
+   top: 0px;
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+  z-index: 2;
+ }
+.oinfo{
+  font-size: 24px;
+  line-height: 1.25;
+  text-align: center;
+}
+.oinfo img{
+  margin: 120px 0 20px 0;
+}
+.oinfo p{
+  margin: 20px 0 40px 0;
+}
+.oinfo p span{
+  color:#f08200;
+}
+.oaddress{
+  font-size: 14px;
+  width: 100%;
+}
+.ads{
+  line-height: 44px;
+  background-color: #f4fff2;
+}
+.ads img{
+  margin: 0 20px;
+}
+.oprice{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:40px 0;
+  font-size: 16px;
+}
+.oprice span{
+  font-size: 18px;
+  color:#d20a11;
+}
+.payment p{
+  padding-bottom: 10px;
+}
+.way{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 40px 0;
+}
+.way li{
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.obor{
+  display: flex;
+  height: 40px;
+  border: 1px solid red;
+  margin-left: 10px;
+  align-items: center;
+}
+
+/********************************************************/
+
+.show{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.show-1{
+  display: flex;
+  align-items: center;
+  margin-left:295px;
+}
+.show-1-1{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin:0 72px;
+}
+.show-1-1 button{
+  background-color:rgb(240, 130, 0);
+  border-radius: 5px;
+  width: 150px;
+  height: 50px;
+  outline: none;
+  color: #ffffff;
+  margin:10px 0;
+  border:0;
+}
+.show-2{
+  display: flex;
+  align-items: center;
+  margin-left: 200px;
+}
+.cc{
+  width: 216px;
+  height: 217px;
+  margin-right: 100px;
+  background: url("http://192.168.47.47:1015/body/order/zfb-1.png") 0px 0px no-repeat;
+}
+.bb{
+  width: 165px;
+  height: 134px;
+  background:url("http://192.168.47.47:1015/body/order/tv.png") 0px 0px no-repeat;
+}
+
+.aa{
+  width: 120px;
+  height: 60px;
+  background-color: white;
+  margin: 25px 0 0 20px;
+}
+#heimu{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index:2;
+}
+.ttt{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 657px;
+  height: 441px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(226, 226, 226);
+  background-color: rgb(255, 255, 255);
+  margin-top:150px;
+  margin-left: 350px;
+}
+.ttt li{
+  margin-top: 80px;
+  font-size: 18px;
+}
+.ttt li button{
+  background-color:rgb(240, 130, 0);
+  border-radius: 5px;
+  width: 180px;
+  height: 60px;
+  outline: none;
+  color: #ffffff;
+  margin: 0 40px;
+}
+.ttt li button div{
+  line-height: 30px;
+  font-size: 18px;
+  color: white;
+}

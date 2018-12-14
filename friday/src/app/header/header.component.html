@@ -1,0 +1,472 @@
+<div id="header">
+  <div class="headwrap">
+    <div class="background">
+      <div class="nav">
+        <div class="navbar-text">
+          所在城市：<a (click)="getCity()" href="javascript:void(0)">{{position}}</a>
+          <span class="glyphicon glyphicon-triangle-bottom"></span>
+          <span class="nav-right">
+    您好，
+    <a class="navbar-link" [routerLink]="username != '请登陆'?['/center/myaccount']:['/relo/login']">{{username}}</a>
+    <a href="###" class="navbar-link" (click)="exit()" [routerLink]="['/relo/login']">退出  |</a>
+    <a href="#" class="navbar-link">  我的订单  |</a>
+    <a href="#" class="navbar-link">  我的消息  |</a>
+    <a href="#" class="navbar-link">  我是商家  |  </a>
+    <img src="http://192.168.47.47:1015/header/littlephone.png" alt="">
+    400-225-245-5511
+  </span>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <img src="http://192.168.47.47:1015/header/logo.png" alt="">
+      <div class="input">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="请输入关键字进行搜索">
+          <span class="input-group-btn">
+        <button class="btn btn-default" type="button"></button>
+      </span>
+        </div>
+      </div>
+      <div class="personcenter"  [routerLink]="['/center/myaccount']">
+        <span>个人中心</span>
+      </div>
+      <div class="cart" [routerLink]="['/mycar']">
+        <span>购物车</span>
+        <span><img src="http://192.168.47.47:1015/header/cartnum.png" alt=""><span>{{count}}</span></span>
+      </div>
+      <p class="hot">
+        <span>热门：</span>
+        <span>奇异果</span>
+        <span>牛排</span>
+        <span>山竹</span>
+        <span>牛油果</span>
+      </p>
+      <div class="menu row">
+        <div class="dropdown">
+          <div class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <div class="col-md-1 ">
+              全部分类
+              <span class="downimg">
+            <img src="http://192.168.47.47:1015/header/downimg.png" alt="">
+          </span>
+            </div>
+
+          </div>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li>
+              <img src="http://192.168.47.47:1015/header/bike.png" alt="">
+              <a href="#">新鲜水果</a>
+              <ul class="leftmenu">
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+              </ul>
+
+            </li>
+            <li>
+              <img src="http://192.168.47.47:1015/header/menu02.png" alt="">
+              <a href="#">生猛海鲜</a>
+              <ul class="leftmenu">
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+              </ul>
+
+            </li>
+            <li>
+              <img src="http://192.168.47.47:1015/header/menu03.png" alt="">
+              <a href="#">肉类家禽</a>
+              <ul class="leftmenu">
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+              </ul>
+
+            </li>
+            <li>
+              <img src="http://192.168.47.47:1015/header/menu04.png" alt="">
+              <a href="#">蛋奶素食</a>
+              <ul class="leftmenu">
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+              </ul>
+
+            </li>
+            <li>
+              <img src="http://192.168.47.47:1015/header/menu05.png" alt="">
+              <a href="#">田园果蔬</a>
+              <ul class="leftmenu">
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+              </ul>
+
+            </li>
+            <li>
+              <img src="http://192.168.47.47:1015/header/menu06.png" alt="">
+              <a href="#">零食酒水</a>
+              <ul class="leftmenu">
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+              </ul>
+
+            </li>
+            <li>
+              <img src="http://192.168.47.47:1015/header/menu07.png" alt="">
+              <a href="#">粮油杂货</a>
+              <ul class="leftmenu">
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+              </ul>
+
+            </li>
+            <li>
+              <img src="http://192.168.47.47:1015/header/menu08.png" alt="">
+              <a href="#">礼品卡券</a>
+              <ul class="leftmenu">
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+              </ul>
+
+            </li>
+            <li>
+              <img src="http://192.168.47.47:1015/header/menu09.png" alt="">
+              <a href="#">家具用品</a>
+              <ul class="leftmenu">
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="yingji">
+                    <span>应季水果</span>
+                  </div>
+                  <div class="yingji-con">
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                    <p>草莓 <span>|</span> 葡萄 <span>|</span> 香蕉 <span>|</span> 苹果</p>
+                  </div>
+                </li>
+              </ul>
+
+            </li>
+
+          </ul>
+
+
+        </div>
+        <div class="col-md-1" [routerLink]="['']">首页</div>
+        <div class="col-md-1">同城</div>
+        <div class="col-md-1">礼拜五</div>
+        <div class="col-md-1">积分商城</div>
+        <div class="col-md-1" [routerLink]="['/aboutfriday']">导航+</div>
+
+      </div>
+
+    </div>
+  </div>
+  <hr>
+</div>
+<div class="heimu" [class.none]="display">
+  <app-city [display]="display" (recommend)="getRecommend($event)" class="heimu"></app-city>
+</div>

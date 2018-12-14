@@ -1,0 +1,138 @@
+<div class="wrap">
+  <div class="wrap-top">
+    <div class="title">
+      <p>订单编号：{{order[0].orderId}}</p>
+      <p>订单状态：{{order[0].orderState}}</p>
+      <div class="btn" [class.btn-show]="a" (click)="delete(order[0].orderId)"><p>删除订单</p></div>
+      <div class="btn" [class.btn-show]="b" (click)="toPay(order[0].orderId)"><p>立即支付</p></div>
+      <div class="btn btn-c" [class.btn-show]="c" (click)="cancel(order[0].orderId)"><p>取消订单</p></div>
+      <div class="btn" [class.btn-show]="d" (click)="apply(order[0].orderId)"><p>申请退款</p></div>
+      <div class="btn" [class.btn-show]="e" (click)="confirm(order[0].orderId)"><p>确认收货</p></div>
+      <div class="btn" [class.btn-show]="f" (click)="read(order[0].orderId)"><p>查看物流</p></div>
+      <div class="btn" [class.btn-show]="g" (click)="finish(order[0].orderId)"><p>交易完成</p></div>
+      <div class="btn" [class.btn-show]="h" (click)="evaluate(order[0].orderId)"><p>去评价</p></div>
+      <div class="btn" [class.btn-show]="i" (click)="intervenion(order[0].orderId)"><p>申请平台介入</p></div>
+    </div>
+  </div>
+  <div class="wrap-bottom">
+    <div class="wh bg bd marginTop">
+      <div class="left">
+        <p class="order">支付方式</p>
+        <p class="order">支付流水号</p>
+        <p class="order">下单时间</p>
+        <p class="order">支付时间</p>
+        <p class="order">发货时间</p>
+        <p class="order">收货时间</p>
+        <p class="order">取消时间</p>
+        <p class="order">申请退款时间</p>
+        <p class="order">退款原因</p>
+        <p class="order">退款时间</p>
+        <p class="order">订单备注</p>
+      </div>
+      <div class="left margin-left">
+        <p class="order">{{order[0].payType}}</p>
+        <p class="order">{{order[0].payNum}}</p>
+        <p class="order">{{order[0].orderTime}}</p>
+        <p class="order">{{order[0].payTime}}</p>
+        <p class="order">{{order[0].sendTime}}</p>
+        <p class="order">{{order[0].getTime}}</p>
+        <p class="order">{{order[0].cancelTime}}</p>
+        <p class="order">{{order[0].aplyRefundTime}}</p>
+        <p class="order">{{order[0].refundCause}}</p>
+        <p class="order">{{order[0].refundTime}}</p>
+        <p class="order">{{order[0].orderRemark}}</p>
+      </div>
+    </div>
+    <div class="zt">
+      <p>收货人信息</p>
+    </div>
+    <div class="wh bg bd">
+      <div class="left">
+        <p class="order">收货人姓名</p>
+        <p class="order">地址</p>
+        <p class="order">联系方式</p>
+      </div>
+      <div class="left margin-left">
+        <p class="order">{{order[0].userSite.name}}</p>
+        <p class="order">{{order[0].userSite.area}}{{order[0].userSite.detail}}</p>
+        <p class="order">{{order[0].userSite.phone}}</p>
+      </div>
+    </div>
+    <div class="zt">
+      <p>发票信息</p>
+    </div>
+    <div class="wh bg bd">
+      <div class="left">
+        <p class="order">发票抬头</p>
+        <p class="order">发票信息</p>
+      </div>
+      <div class="left margin-left">
+        <p class="order">{{order[0].userSite.name}}</p>
+        <p class="order">明细</p>
+      </div>
+    </div>
+    <div class="zt">
+      <p>物流信息</p>
+    </div>
+    <div class="wh bg bd">
+      <div class="left">
+        <p class="order">联系人</p>
+        <p class="order">联系方式</p>
+      </div>
+      <div class="left margin-left">
+        <p class="order">{{order[0].logistics.name}}</p>
+        <p class="order">{{order[0].logistics.phone}}</p>
+      </div>
+    </div>
+    <div class="zt">
+      <p>卖家信息</p>
+    </div>
+    <div class="wh bg bd">
+      <div class="left">
+        <p class="order">店铺名称</p>
+        <p class="order">真实姓名</p>
+        <p class="order">联系电话</p>
+      </div>
+      <div class="left margin-left">
+        <p class="order">{{order[0].commodityId.shopName}}</p>
+        <p class="order">{{order[0].commodityId.shopkeeper}}</p>
+        <p class="order">{{order[0].commodityId.shopPhone}}</p>
+      </div>
+    </div>
+    <div class="products">
+      <div class="nav bg bd">
+        <p>{{order[0].commodityId.shopName}}</p>
+        <p>规格</p>
+        <p>价格</p>
+        <p>数量</p>
+        <p>金额</p>
+      </div>
+      <div class="centent">
+        <div class="items" *ngFor="let product of pro">
+          <div class="item"><p>图片</p></div>
+          <div class="item"><p>{{product.commodityName}}</p></div>
+          <div class="item"><p>{{product.size}}</p></div>
+          <div class="item"><p>{{product.commodityPrice}}</p></div>
+          <div class="item"><p>{{product.count}}</p></div>
+          <div class="item"><p>{{product.commodityPrice*product.count}}</p></div>
+        </div>
+        <div style="position: relative;height: 59px">
+          <p style="position: absolute;top: 5px;right: 99px;">实付金额:</p>
+          <p style="color: #f08200;font-size: 18px;position: absolute;top: 5px;right: 0px;">¥{{price + 8}}</p>
+        </div>
+        <div style="height: 50px;position:relative;margin-bottom: 20px">
+          <div class="btn" [class.btn-show]="a" (click)="delete(order[0].orderId)"><p>删除订单</p></div>
+          <div class="btn" [class.btn-show]="b" (click)="toPay(order[0].orderId)"><p>立即支付</p></div>
+          <div class="btn btn-c" [class.btn-show]="c" (click)="cancel(order[0].orderId)"><p>取消订单</p></div>
+          <div class="btn" [class.btn-show]="d" (click)="apply(order[0].orderId)"><p>申请退款</p></div>
+          <div class="btn" [class.btn-show]="e" (click)="confirm(order[0].orderId)"><p>确认收货</p></div>
+          <div class="btn" [class.btn-show]="f" (click)="read(order[0].orderId)"><p>查看物流</p></div>
+          <div class="btn" [class.btn-show]="g" (click)="finish(order[0].orderId)"><p>交易完成</p></div>
+          <div class="btn" [class.btn-show]="h" (click)="evaluate(order[0], pro)"><p>去评价</p></div>
+          <div class="btn" [class.btn-show]="i" (click)="intervenion(order[0].orderId)"><p>申请平台介入</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

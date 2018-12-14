@@ -1,0 +1,27 @@
+<div class="wrap">
+  <div class="wrap-title">账户余额: <p>¥{{wallet}}</p></div>
+  <div class="box">
+    <div>请选择充值金额</div>
+    <div>
+      <div [class.choose]="flag1" (click)="choose(1)">500</div>
+      <div [class.choose]="flag2" (click)="choose(2)">1000</div>
+      <div [class.choose]="flag3" (click)="choose(3)">2000</div>
+    </div>
+    <div>充值有礼</div>
+    <div>
+      <div>
+        <p>充500元送:</p>
+        <img src="">
+        <p>新疆哈密瓜25kg</p>
+        <p>价值500</p>
+      </div>
+      <div>
+        <p>充500元送:</p>
+        <img src="">
+        <p>新疆哈密瓜25kg</p>
+        <p>价值500</p>
+      </div>
+    </div>
+    <div (click)="topUp()">立即充值</div>
+  </div>
+</div>

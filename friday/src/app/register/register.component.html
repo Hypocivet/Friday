@@ -1,0 +1,41 @@
+<div id="register">
+  <div class="input">
+    <input type="text" placeholder="请输入手机号" [(ngModel)]="phone" (blur)="isphone()">
+    <img src="http://192.168.47.47:1015/body/relo/check.png" alt="" [class.none]="!phoneIsTrue">
+  </div>
+  <div class="warning" [class.none]="phoneIsTrue">
+    <img src="http://192.168.47.47:1015/body/relo/alert.png" alt="">
+    <span>手机号码不正确，请重新输入</span>
+  </div>
+  <div class="input">
+    <input type="password" placeholder="请输入密码（6-20位号码字符）" [(ngModel)]="password"  (blur)="ispassword()">
+    <img src="http://192.168.47.47:1015/body/relo/check.png" alt="" [class.none]="!passwordIsTrue">
+  </div>
+  <div class="warning" [class.none]="passwordIsTrue">
+    <img src="http://192.168.47.47:1015/body/relo/alert.png" alt="">
+    <span>密码不符合规则，请重新输入</span>
+  </div>
+  <div class="input">
+    <input type="password" placeholder="请再次输入密码确认" [(ngModel)]="rePassword"  (blur)="repassword()">
+    <img src="http://192.168.47.47:1015/body/relo/check.png" alt=""[class.none]="!similarPassword">
+  </div>
+  <div class="warning" [class.none]="similarPassword">
+    <img src="http://192.168.47.47:1015/body/relo/alert.png" alt="">
+    <span>两次密码不一致，请重新输入</span>
+  </div>
+  <div id="code">
+    <div class="input">
+      <input type="text" placeholder="验证码">
+    </div>
+    <img src="" alt="">
+  </div>
+  <div class="input get">
+    <input type="text" placeholder="手机验证码">
+    <button>获取验证码</button>
+  </div>
+  <div class="agreement"><img src="http://192.168.47.47:1015/body/relo/toClick.png" alt="" (click)="sure($event)"><span>我已阅读并同意《礼拜五用户协议》</span></div>
+  <div class="input flex">
+    <button (click)="register()">注册</button>
+    <button (click)="toLogin()">登陆</button>
+  </div>
+</div>

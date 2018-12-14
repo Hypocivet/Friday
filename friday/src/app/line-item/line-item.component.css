@@ -1,0 +1,144 @@
+.wrap{
+  width: 100%;
+}
+.wrap-top{
+  width: 100%;
+  height: 59px;
+  box-sizing: border-box;
+  border: 1px solid #d0d0d0;
+  display: flex;
+}
+.title{
+  width: 1046px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.title>p:nth-child(1){
+  position: absolute;
+  left: 0;
+  top: 20px;
+  font-size: 18px;
+}
+.title>p:nth-child(2){
+  position: absolute;
+  left: 464px;
+  top: 20px;
+  font-size: 18px;
+}
+.wh{
+  width: 1046px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.bg{
+  background-color: #f9f9f9;
+}
+.bd{
+  border: 1px solid;
+}
+.marginTop{
+  margin-top: 20px;
+}
+.zt{
+  width: 1046px;
+  height: 59px;
+  margin: 0 auto;
+  position: relative;
+}
+.zt>p{
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
+.order{
+  margin-left: 20px;
+  padding-top: 10px;
+}
+.left{
+  float: left;
+}
+.btn{
+  width: 90px;
+  height: 30px;
+  background-color: #498e3d;
+  font-size: 14px;
+  display: none;
+  float: right;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.btn-c{
+  background-color: #999999;
+}
+.btn-show{
+  display: block;
+}
+.nav{
+  height: 59px;
+  width: 1045px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+}
+.nav>p{
+  position: absolute;
+  top: 20px;
+}
+.nav>p:nth-child(1){
+  left: 15px;
+}
+.nav>p:nth-child(2){
+  left: 400px;
+}
+.nav>p:nth-child(3){
+  left: 620px;
+}
+.nav>p:nth-child(4){
+  right: 220px;
+}
+.nav>p:nth-child(5){
+  right: 10px;
+}
+.centent{
+  width: 1045px;
+  margin: 0 auto;
+}
+.items{
+  width: 100%;
+  overflow: hidden;;
+}
+.item{
+  width: 174px;
+  height: 150px;
+  float: left;
+  position: relative;
+}
+.items div:nth-child(2)>p{
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
+.items div:nth-child(3)>p{
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
+.items div:nth-child(4)>p{
+  position: absolute;
+  left: 100px;
+  top: 50px;
+}
+.items div:nth-child(5)>p{
+  position: absolute;
+  left: 100px;
+  top: 50px;
+}
+.items div:nth-child(6)>p{
+  position: absolute;
+  right: 20px;
+  top: 50px;
+}
+.margin-left{
+  margin-left: 20px;
+}

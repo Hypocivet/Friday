@@ -1,0 +1,33 @@
+<div id="changephone">
+<div class="title">换绑手机</div>
+  <div class="step">
+    <div>
+      <img [src]="isDo == 1?'http://192.168.47.47:1015/body/userCenter/do1.png':'http://192.168.47.47:1015/body/userCenter/wait1.png'" alt="">
+      <span [class.white]="isDo == 1?true:false">1.验证原手机号</span>
+    </div>
+    <div>
+      <img [src]="isDo == 2?'http://192.168.47.47:1015/body/userCenter/do2.png':'http://192.168.47.47:1015/body/userCenter/wait2.png'" alt="">
+      <span [class.white]="isDo == 2?true:false">2.验证新手机号</span>
+    </div>
+    <div>
+      <img [src]="isDo == 3?'http://192.168.47.47:1015/body/userCenter/do3.png':'http://192.168.47.47:1015/body/userCenter/wait3.png'" alt="">
+      <span [class.white]="isDo == 3?true:false">3.换绑成功</span>
+    </div>
+  </div>
+  <div class="form" [class.none]="isDo == 3?true:false">
+    <div><input type="text" [(ngModel)]="phone" [placeholder]="isDo == 2?'请输入新的手机号':''"></div>
+    <div>
+      <div class="input"><input type="text" placeholder="验证码" [ngModel]=""></div>
+    </div>
+    <div style="position: relative">
+      <input type="password" [placeholder]="isDo == 1?'输入密码验证身份':'手机验证码'" [(ngModel)]="password">
+      <div class="get" [class.none]="isDo == 1?true:false">获取验证码</div>
+    </div>
+  </div>
+  <div id="success" [class.none]="isDo == 3?false:true">
+    <img src="http://192.168.47.47:1015/body/userCenter/success.png">
+    <span>恭喜您成功修改</span>
+  </div>
+  <button (click)="submit()" [class.none]="isDo == 3?true:false">点击提交</button>
+  <div>{{password}}</div>
+</div>

@@ -1,0 +1,32 @@
+<div class="wrap">
+  <div class="wrap-title">
+    <p>订单评价</p>
+  </div>
+  <div class="wrap-centent">
+    <div class="item" *ngFor="let product of pro[0]; let i = index">
+      <div class="item-left">
+        <img [alt]=""/>
+      </div>
+      <div class="productName">
+        {{product.commodityName}}
+      </div>
+
+      <div class="item-right">
+        <div>
+          <p class="left">商品评分</p>
+          <div class="left"></div>
+        </div>
+        <div>
+          <p class="left">评价商品</p>
+          <div class="left"><textarea [(ngModel)]="orderRemark[i]" placeholder="商品评价,最少10个字,最多50个字"></textarea></div>
+        </div>
+        <div>
+          <p class="left">晒照片</p>
+        </div>
+      </div>
+    </div>
+    <div class="centent-bto">
+      <div class="btn" (click)="doclick()">提交评价</div>
+    </div>
+  </div>
+</div>

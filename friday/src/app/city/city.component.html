@@ -1,0 +1,22 @@
+<div id="cityChoose" xmlns="" [class.none]="display">
+  <div ng-app="getCity" ng-controller="cityCtrl">
+    <span>建议您的收货地址</span>
+    <div class="position">{{userPosition}}</div>
+  </div>
+  <div class="choose">
+      <select id="province" (change)="province($event)">
+        <option value="">省</option>
+        <option *ngFor="let citys of provinceArr" value="{{citys[0]}}">{{citys[1]}}</option>
+      </select>
+      <select id="city" (change)="city($event)">
+        <option value="">市</option>
+        <option *ngFor="let citys of cityArr" value="{{citys[0]}}">{{citys[1]}}</option>
+      </select>
+      <select id="country" (change)="county($event)">
+        <option value="">区</option>
+        <option *ngFor="let citys of countyArr" value="{{citys[0]}}">{{citys[1]}}</option>
+      </select>
+  </div>
+  <button (click)="postCity()">保存</button>
+</div>
+

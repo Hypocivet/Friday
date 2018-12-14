@@ -1,0 +1,29 @@
+<div id="center">
+  <div class="aoe">
+    <div class="choose">
+      <div class="title">个人中心</div>
+      <div class="all">
+        <ul>
+          <li class="big">交易管理&nbsp;&nbsp;></li>
+          <li><a [routerLink]="['/center/myaccount']">我的账户</a></li>
+          <li><a [routerLink]="['/center/myorder']">我的订单</a></li>
+          <li><a [routerLink]="['/center/mypoints']">我的积分</a></li>
+          <li><a [routerLink]="['/center/integralorder']">积分订单</a></li>
+          <li><a [routerLink]="['/center/mywallet']">我的钱包</a></li>
+          <li class="big">会员资料&nbsp;&nbsp;></li>
+          <li><a [routerLink]="['/center/mine']">个人资料</a></li>
+          <li><a [routerLink]="['/center/usersite']">地址管理</a></li>
+          <li><a [routerLink]="['/center/mycollection']">我的收藏</a></li>
+          <li><a [routerLink]="['/center/recent']">最近浏览</a></li>
+          <li><a [routerLink]="['/center/changepassword']">修改密码</a></li>
+          <li class="big">站内信&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></li>
+          <li><a [routerLink]="['/center/mynews']">我的消息</a></li>
+          <li><a [routerLink]="['/center/feedback']">意见反馈</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="specific">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

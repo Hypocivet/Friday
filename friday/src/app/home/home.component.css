@@ -1,0 +1,119 @@
+a{
+  text-decoration: none;
+  color:inherit;
+}
+.recommend{
+  width: 1280px;
+  height: 138px;
+  margin-top: 17px;
+  margin-bottom: 20px;
+}
+.friday{
+  width: 1280px;
+  height: 640px;
+}
+.fri{
+  width: 1280px;
+  height: 576px;
+}
+.f-head{
+  width: 1280px;
+  height: 100px;
+  background-color: #ebffe8;
+  color: #67a05e;
+}
+.f-head-l{
+  margin-top: 32px;
+  display: inline-block;
+
+  margin-left: 32px;
+}
+.f-head-l img{
+  margin-top: -17px;
+}
+.f-head-r{
+  float: right;
+  display: inline-block;
+  margin-right: 30px;
+  margin-top: 32px;
+}
+.lf{
+  margin: 0 15px;
+  font-size: 24px;
+}
+.ls{
+  font-size: 20px;
+  color: gray;
+}
+.more{
+  margin: 0 15px;
+  font-size: 17px;
+}
+
+.f-head-r img{
+  margin-top: -10px;
+}
+.f-head-r span:last-child{
+  margin-left: 20px;
+}
+
+.f-head{
+  margin-bottom: 20px;
+}
+.row{
+  width: 1280px;
+  height: 540px;
+  margin: 0;
+}
+.friday-con1{
+  width: 306px;
+  height: 433px;
+  background-color: #f8f6f7;
+}
+
+.friday-con1 img:not(.carY){
+  margin-left: 14px;
+  margin-top: 50px;
+}
+.friday-con1 p{
+  margin-left: 86px;
+  margin-top: 20px;
+}
+.friday-con1 p:last-child{
+  color: #f08200;
+  font-size:15px;
+  margin-top: 14px;
+  margin-left: 66px;
+}
+.friday-con1 p:last-child>span{
+  color: #ff5757;
+  font-size:20px;
+}
+.friday-con1:not(.con4){
+  margin-right: 18px;
+}
+.active{
+  margin: 0;
+}
+
+.friday-con .carousel-indicators li{
+  background-color: #b0b0b0;
+}
+.f-head-r-1 span{
+  float: right;
+  margin-top: -22px;
+  margin-right: 38px;
+}
+.row del{
+  margin-left: 22px;
+  margin-bottom: 10px;
+  color: #59974e;
+}
+
+.fri .row p span{
+  margin-left: -44px;
+}
+.carY{
+  margin-left: 35px;
+}
+

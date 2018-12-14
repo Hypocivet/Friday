@@ -1,0 +1,122 @@
+.wrap{
+  width: 1088px;
+  height: 625px;
+  position: relative;
+}
+.top{
+  width: 100%;
+  height: 225px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #d0d0d0;
+  background-color: #f4fff2;
+  position: relative;
+}
+.bottom{
+  width: 100%;
+  height: 385px;
+  box-sizing: border-box;
+  border-top: 1px solid #d0d0d0;
+  position: absolute;
+  bottom: 0;
+  background: url("http://192.168.47.47:1015/body/userCenter/myaccountBG.png");
+  background-size: 100% 100%;
+}
+.headImg{
+  position: absolute;
+  top: 43px;
+  left: 41px;
+  width: 136px;
+}
+.account{
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  font-size: 18px;
+}
+.myaccount{
+  position: absolute;
+  top: 100px;
+  left: 245px;
+  font-size: 18px;
+  color: #e85e35;
+}
+.integral{
+  position: absolute;
+  top: 80px;
+  left: 600px;
+  font-size: 18px;
+}
+.wallet{
+  position: absolute;
+  top: 80px;
+  left: 755px;
+  font-size: 18px;
+}
+.Recharge{
+  position: absolute;
+  left: 910px;
+  top: 80px;
+  font-size: 18px;
+  color: #85b47d;
+  cursor: pointer;
+}
+.integralNum{
+  position: absolute;
+  top: 130px;
+  left: 600px;
+  font-size: 18px;
+}
+.walletNum{
+  position: absolute;
+  top: 130px;
+  left: 755px;
+  font-size: 18px;
+}
+.conversion{
+  position: absolute;
+  left: 910px;
+  top: 130px;
+  font-size: 18px;
+  color: #e85e35;
+  cursor: pointer;
+}
+.box{
+  width: 540px;
+  height: 235px;
+  box-sizing: border-box;
+  border: 10px solid #e0e0e0;
+  background-color: #e9e9e9;
+  opacity: .5;
+  position: absolute;
+  left: 274px;
+  top: 75px;
+}
+.titleOne{
+  position: absolute;
+  top: 100px;
+  left: 335px;
+  font-size: 48px;
+  color: #ffffff;
+}
+.titleTwo{
+  position: absolute;
+  top: 200px;
+  left: 440px;
+  font-size: 36px;
+  color: #ffffff;
+}
+.xianO,.xianT{
+  width: 420px;
+  height: 1px;
+  border-top: 1px solid #ffffff;
+}
+.xianO{
+  position: absolute;
+  top: 175px;
+  left: 335px;
+}
+.xianT{
+  position: absolute;
+  top: 275px;
+  left: 335px;
+}

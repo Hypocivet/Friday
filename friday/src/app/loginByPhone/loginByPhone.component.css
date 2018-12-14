@@ -1,0 +1,209 @@
+.login-box{
+  width: 387px;
+  height: 500px;
+  position: relative;
+}
+.wrap{
+  width: 310px;
+  height: 450px;
+  position: absolute;
+  left: 38px;
+  top: 25px;
+}
+.p1{
+  font-size: 24px;
+}
+.iphone{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 16px;
+  color: #498e3d;
+}
+.iphone-img{
+  position: absolute;
+  right: 0;
+  top: 13px;
+}
+.iphone-input{
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+  border: 1px solid #d3d3d3;
+  position: relative;
+  background-color: #f9f9f9;
+  margin-top: 15px;
+}
+input{
+  outline: none;
+  border: none;
+  background-color: #f9f9f9;
+}
+.username,.password{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.check{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: none;
+}
+.alerts{
+  display: none;
+  position: absolute;
+  top: 97px;
+}
+.alert-p{
+  font-size: 12px;
+  position: absolute;
+  left: 20px;
+  top: 95px;
+  display: none;
+}
+.password-input{
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+  border: 1px solid #d3d3d3;
+  position: absolute;
+  left: 0;
+  top: 180px;
+  background-color: #f9f9f9;
+}
+.verificationDiv{
+  width: 113px;
+  height: 44px;
+  position: absolute;
+  left: 0;
+  top: 120px;
+  box-sizing: border-box;
+  border: 1px solid #d3d3d3;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+.verificationP{
+  position: absolute;
+  left: 36px;
+  top: 13px;
+}
+.checkBox{
+  position: absolute;
+  left: 0;
+  top: 240px;
+}
+.checkBox-p{
+  position: absolute;
+  left: 20px;
+  top: 237px;
+  font-size: 14px;
+}
+.forget{
+  position: absolute;
+  right: 0;
+  top: 237px;
+  color: #f08200;
+  text-decoration: underline;
+}
+.login-regist{
+  width: 100%;
+  height: 45px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 280px;
+}
+.login-regist>div{
+  width: 133px;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.left{
+  float: left;
+  border-radius: 5px;
+  background-color: #f08200;
+}
+.left>p,.right>p{
+  position: absolute;
+  left: 50px;
+  top: 11px;
+}
+.right{
+  float: right;
+  border-radius: 5px;
+  background-color: #498e3d;
+}
+.hint{
+  position: absolute;
+  top: 335px;
+  font-size: 14px;
+}
+.web{
+  position: absolute;
+  top: 365px;
+}
+.qqWechat{
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  width: 30%;
+  height: 50px;
+}
+.qq{
+  float: right;
+  border: 1px solid #4dafea;
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  left: 55px;
+  cursor: pointer;
+}
+.wechat{
+  cursor: pointer;
+  float: left;
+  border: 1px solid #00cd0d;
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  left: 5px;
+}
+.qq img{
+  position: absolute;
+  left: 8px;
+  top: 5px;
+}
+.wechat img{
+  position: absolute;
+  left: 7px;
+  top: 9px;
+}
+.mycode{
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  vertical-align: middle;
+}
+.show{
+  display: block;
+}
+.getpwd{
+  width: 100px;
+  height: 32px;
+  background-color: #498e3d;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+.getpwd>p{
+  color: white;
+  position: absolute;
+  left: 13px;
+  top: 7px;
+}
+

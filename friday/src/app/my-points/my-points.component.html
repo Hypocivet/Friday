@@ -1,0 +1,18 @@
+<div class="wrap">
+  <div class="wrap-title">
+    <p>我的积分</p>
+  </div>
+  <div class="wrap-centent">
+    <div>当前积分  {{integral}}</div>
+    <div class="centent-title">
+      <div>积分日期</div>
+      <div>变动</div>
+      <div>来源</div>
+    </div>
+    <div class="centent-centent" *ngFor='let point of Integralorder'>
+      <div>{{point.date}}</div>
+      <div>{{point.change}}</div>
+      <div>{{point.type}}</div>
+    </div>
+  </div>
+</div>

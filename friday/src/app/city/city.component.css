@@ -1,0 +1,62 @@
+.none{
+  display: none;
+}
+#cityChoose{
+  width:702px;
+  height:355px;
+  background: url("http://192.168.47.47:1015/header/bg.png") no-repeat;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "微软雅黑";
+  margin:100px auto;
+  position:relative;
+  z-index: 3;
+}
+#cityChoose>div:nth-child(1)>span{
+  position: absolute;
+  left:66px;
+  top:65px;
+}
+#cityChoose>div:nth-child(1)>div{
+  position:absolute;
+  font-size: 16px;
+  left:242px;
+  top:60px;
+  width:178px;
+  height:35px;
+  background:#498e3d;
+  border-radius:5px;
+  border:7px solid #498e3d;
+  box-sizing:border-box;
+  text-align: center;
+  color: #ffffff;
+}
+.choose{
+  width:590px;
+  height:35px;
+  display: flex;
+  justify-content: space-between;
+  border-top:160px solid transparent;
+  border-left:66px solid transparent;
+}
+select{
+  width:140px;
+  height:35px;
+}
+.choose span{
+  border:5px solid transparent;
+}
+button{
+  background: #f08200;
+  width:150px;
+  height:35px;
+  border-radius:5px;
+  border:5px solid transparent;;
+  box-sizing:border-box;
+  color: #ffffff;
+  position:absolute;
+  bottom: 65px;
+  left:275px;
+}

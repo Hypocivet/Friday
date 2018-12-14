@@ -1,0 +1,23 @@
+<div id="addsite">
+  <div class="title">添加新地址</div>
+  <div class="form">
+    <div><span>*</span>收货人姓名：<input type="text" style="width:330px;" [(ngModel)]="name"></div>
+    <div><span>*</span>所在地区：<select id="province" (change)="province($event)">
+      <option value="">省</option>
+      <option *ngFor="let citys of provinceArr" value="{{citys[0]}}">{{citys[1]}}</option>
+    </select>
+      <select id="city" (change)="city($event)">
+        <option value="">市</option>
+        <option *ngFor="let citys of cityArr" value="{{citys[0]}}">{{citys[1]}}</option>
+      </select>
+      <select id="country" (change)="county($event)">
+        <option value="">区</option>
+        <option *ngFor="let citys of countyArr" value="{{citys[0]}}">{{citys[1]}}</option>
+      </select>
+    </div>
+    <div><span>*</span>详细地址：<input type="text" style="width:460px;" [(ngModel)]="area"></div>
+    <div><span>*</span>联系电话：<input type="text" style="width:152px" [(ngModel)]="phone">或固定电话<input type="text" style="width:49px;" [(ngModel)]="phone1">-<input type="text" style="width:125px;" [(ngModel)]="phone2"></div>
+    <div class="radio"><input type="radio" [(ngModel)]="default" (click)="chkRadio($event)">设置为常用地址</div>
+    <button (click)="addSite()">保存</button>
+  </div>
+</div>

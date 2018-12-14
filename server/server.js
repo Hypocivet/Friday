@@ -1,0 +1,183 @@
+var server = require("express");
+var path = require('path');
+var bodyParser = require('body-parser');
+var mongod = require("./mongodb");
+var app = new server();
+var city = require("../friday/src/app/city/city");
+app.use(bodyParser.json());
+app.all("*",function (request,response,next) {
+    response.setHeader("Access-Control-Allow-Origin", "*");
+    response.setHeader("Access-Control-Allow-Headers", "X-Requested-With");
+    response.setHeader("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+    next();
+});
+app.get(/^.+\.png/,function(request,response){
+    response.sendfile(path.resolve("../friday/src/assets/imgs" + request.path));
+});
+app.get('/position',function(request,response){
+
+});
+app.post("/api/login",function(request,response){
+    mongod.getUserByPhone(request.body.phoneNum,request.body.password,function(results){
+        if(results){
+            response.json(true);
+        }else{
+            response.json(false);
+        }
+    })
+});
+app.post("/api/register",function(request,response){
+    mongod.addUser(request.body.phoneNum,request.body.password,function(results){
+        if(results){
+            response.json(true);
+        }else{
+            response.json(false);
+        }
+    });
+    mongod.addUserInfo("","","",request.body.phoneNum,"0","0",function(){});
+});
+app.post("/api/update",function(request,response){
+    mongod.updateUserInfo(request.body.headImg.__zone_symbol__value,request.body.sex,request.body.birthday,request.body.phone,function(results){
+        if(results){
+            response.json(true);
+        }else{
+            response.json(false);
+        }
+    });
+});
+app.post("/api/changephone",function(request,response){
+    mongod.updateUser(request.body.oldPhone,request.body.newPhone);
+    mongod.changePhone(request.body.oldPhone,request.body.newPhone,function(results){
+        if(results){
+            response.json(true);
+        }else{
+            response.json(false);
+        }
+    });
+});
+app.post("/api/findUser",function(request,response){
+    mongod.getUserInfo(request.body.phone,function(resultss){
+        response.json(resultss);
+    })
+});
+app.post("/api/orderform",function(request,response){
+    mongod.getOrderinfo(request.body.username,function(results){
+        response.json(results);
+    });
+});
+app.post("/api/addsite",function(request,response){
+    mongod.addUserSite(request.body.userId,request.body.name,request.body.area,request.body.detail,request.body.phone,request.body.default,(results)=>{
+        if(results){
+            response.json(true);
+        }else{
+            response.json(false);
+        }
+    });
+});
+app.post("/api/getsite",function(request,response){
+    mongod.getUserSite(request.body.userId,(resultss)=>{
+        response.json(resultss);
+    });
+});
+app.post("/api/deletesite",function(request,response){
+   mongod.deleteSite(request.body.id,(results)=>{
+       if(results){
+           response.json(true);
+       }else{
+           response.json(false);
+       }
+   });
+});
+app.post("/api/updateorder",function(request,response){
+    mongod.updateOrder(request.body.orderId,request.body.orderState,(results)=>{
+        if(results){
+            response.json(true);
+        }else{
+            response.json(false);
+        }
+    });
+});
+app.post("/api/gettime",function(request,response){
+    mongod.updateOderGetTime(request.body.orderId,request.body.getTime,(results)=>{
+        if(results){
+            response.json(true);
+        }else{
+            response.json(false);
+        }
+    });
+});
+app.post("/api/canceltime",function(request,response){
+    mongod.updateOrderCancelTime(request.body.orderId,request.body.cancelTime,(results)=>{
+        if(results){
+            response.json(true);
+        }else{
+            response.json(false);
+        }
+    });
+});
+app.post("/api/aplyrefundtime",function(request,response){
+    mongod.updateOrderAplyRefundTime(request.body.orderId,request.body.aplyRefundTime,(results)=>{
+        if(results){
+            response.json(true);
+        }else{
+            response.json(false);
+        }
+    });
+});
+app.post("/api/refundtime",function(request,response){
+    mongod.updateOrderRefundTime(request.body.orderId,request.body.refundTime,(results)=>{
+        if(results){
+            response.json(true);
+        }else{
+            response.json(false);
+        }
+    });
+});
+app.post("/api/deleteorder",function(request,response){
+    mongod.deleteOrder(request.body.orderId,(results)=>{
+        if(results){
+            response.json(true);
+        }else{
+            response.json(false);
+        }
+    });
+});
+app.post("/api/orderremark",function(request,response){
+    mongod.updateOrderRemark(request.body.orderId,request.body.orderRemark,(results)=>{
+        response.json(results);
+    });
+});
+app.post("/api/getcar",function(request,response){
+    mongod.getCar(request.body.userId,(results)=>{
+        response.json(results);
+    });
+});
+app.post("/api/getintegration",function(request,response){
+    mongod.getIntegration(request.body.username,(results)=>{
+        response.json(results);
+    });
+});
+app.post("/api/getintorder",function(request,response){
+    mongod.getIntorder(request.body.userId,(results)=>{
+        response.json(results);
+    })
+});
+app.post("/api/city",function(request,response){
+    response.json(city);
+});
+app.post("/api/topup",function(request,response){
+    mongod.updateBalance(request.body.userId,request.body.balance,(results)=>{
+        if(results){
+            response.json(true);
+        }else{
+            response.json(false);
+        }
+    })
+});
+app.post("/api/getcommodity",function(request,response){
+   mongod.getCommodity((results)=>{
+       console.log(results);
+       response.json(results);
+   })
+});
+app.listen(1015);
